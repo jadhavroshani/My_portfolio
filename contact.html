@@ -1,58 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
-    <title>My awesome Portfolio</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+  <title>My awesome Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    .multicolortext {
+
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      text-shadow: 5px 5px 10px black;
+      color: #c5b6bf;
+      margin-left: 28rem;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="cont">
-      <h2>Contact</h2>
-        <form action="action_page.php">
-      
-      
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  <div class="cont">
 
-          <label for="lname">Contact Number</label>
-          <input type="text" id="cname" name="Contact" placeholder="Your contact number..">
+    <h1>
+      <span class="multicolortext">CONTACT</span>
+    </h1>
+    <form action="action_page.php">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-          <label for="lname">Email</label>
-          <input type="text" id="ename" name="email" placeholder="Your Email..">
-         
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="lname">Contact Number</label>
+      <input type="text" id="cname" name="Contact" placeholder="Your contact number..">
+
+      <label for="lname">Email</label>
+      <input type="text" id="ename" name="email" placeholder="Your Email..">
+
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="india">India</option>
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+     
+        <button type="button" class="cancelbtn">Submit</button>
+        <a href="index.html"> <button type="button" class="cancelbtn">Cancel</button></a>
+     
       
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="india">India</option>
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select>
-      
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-          <button type="button" class="cancelbtn">Cancel</button>
-      
-        </form>
-      </div>
-    
-                
-             
-          
-        
+
+
+    </form>
+  </div>
+
+
+
+
+
 
 </body>
 
 </html>
-

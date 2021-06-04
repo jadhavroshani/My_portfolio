@@ -4,7 +4,7 @@
     --dark:#161616;
     --pure:#FFFFFF;
     --ternary:#898989;
-    --light:F2F2F2;
+    --light:#F2F2F2;
     --grey: #696969;
     --pink:#FF1493;
     --blue:#71bae4;
@@ -21,6 +21,8 @@ body{
 header {
     background: var(--dark);
     clip-path: polygon(0 0 ,100% 0 ,100% 100% , 80% 90%,0 100%);
+   
+  
 }
 .container_1 {
     background-color: #0c0811;
@@ -50,6 +52,7 @@ section{
     padding:0 15px;
     margin :0 auto;
 }
+
 header nav .left a{
 
     color:var(--pure);
@@ -94,7 +97,7 @@ header nav .left a:hover{
     color:#3DCFD3;
 }
 .container_1  nav .left a:hover{
-    color:#060d0e;
+    color:#306e6e;
 }
 section nav .left a:hover{
     color:palevioletred;
@@ -110,6 +113,7 @@ header nav
 
 }
 header .right {
+    
     margin-right: 5rem;
 
 }
@@ -430,7 +434,7 @@ input[type=text], select, textarea {
   }
   .cont h2{
     color: rgb(255, 255, 255);
-    margin-left: 25rem;
+    margin-left: 28rem;
     text-shadow: #3DCFD3;
   }
 
@@ -509,7 +513,7 @@ input[type=text], select, textarea {
 table{
   width:100%;
    background: #312e2f;
-  color: #f8f2f2;
+  
 }
 thead tr td{
   font-weight:400;
@@ -584,4 +588,5 @@ tbody td:nth-child(2) .percent{
 .last{
   border:none;
 }
+
 
