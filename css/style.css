@@ -56,8 +56,10 @@ section{
 header nav .left a{
 
     color:var(--pure);
+    display: inline;
     text-decoration: none;
-    margin-right: 3rem;
+    padding-left: 2rem;
+    margin-right: 1rem;
     text-transform: uppercase;
     transition:all .3s ease;
     -webkit-transition:all .3s ease;
@@ -68,9 +70,11 @@ header nav .left a{
 }
 .container_1 nav .left a{
 
-    color:var(--pure);
+  color:var(--dark);
+    display: inline;
     text-decoration: none;
-    margin-right: 3rem;
+    padding-left: 2rem;
+    margin-right: 1rem;
     text-transform: uppercase;
     transition:all .3s ease;
     -webkit-transition:all .3s ease;
@@ -79,11 +83,22 @@ header nav .left a{
     -o-transition: all .3 ease;
 
 }
+.container_1 nav .left button{
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+.container_1 nav .right button{
+  background-color: transparent;
+  color: white;
+  border: none;
+}
 section nav .left a{
 
-    color:var(--pure);
-    text-decoration: none;
-    margin-right: 3rem;
+ 
+
+    padding-left: 2rem;
+    margin-right: 1rem;
     text-transform: uppercase;
     transition:all .3s ease;
     -webkit-transition:all .3s ease;
@@ -96,11 +111,15 @@ section nav .left a{
 header nav .left a:hover{
     color:#3DCFD3;
 }
-.container_1  nav .left a:hover{
-    color:#306e6e;
+.container_1  nav .left a :hover{
+    color:#5db4b4;
 }
+.container_1  nav .right a :hover{
+  color:#5db4b4;
+}
+
 section nav .left a:hover{
-    color:palevioletred;
+    color:rgb(229, 145, 173);
 }
 header nav
 {
@@ -123,8 +142,19 @@ header .right {
 }
 section nav
 {
-    padding: 2rem 0;
+  
+    padding: 1rem 0;
 
+}
+section nav .left button{
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+}
+section nav .right button{
+  background-color: transparent;
+  border: none;
+  margin-right: 2rem;
 }
 section nav .branding{
     margin-right: 2rem;
