@@ -24,41 +24,102 @@
 
     }
   </style>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+  
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+  
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+  
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+  
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+  
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+  
+      #main {
+        transition: margin-left .5s;
+        padding: 16px;
+      }
+  
+      @media screen and (max-height: 450px) {
+        .sidenav {
+          padding-top: 15px;
+        }
+  
+        .sidenav a {
+          font-size: 18px;
+        }
+      }
+    </style>
 
 </head>
 
 <body>
+  <header>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-  <div class="container_1">
+    <a href="index.html"> <i class="fas fa-home fa-1x" style="padding-bottom: 0.5rem;"></i><span
+        style="margin-left: 10px;">Home</span></a>
+    <a href="About.html"><i class="fas fa-user-alt fa-1x" style="padding-bottom: 0.5rem;"></i>
+      <span style="margin-left: 10px;">About</span></a>
+    <a href="project.html"> <i class="fas fa-project-diagram fa-1x" style="padding-bottom: 0.5rem;"></i> <span style="margin-left: 6px;">Projects</span></a>
+    <a href="skill.html"> <i class="fas fa-cogs fa-1x" style="padding-bottom: 0.5rem;"></i><span style="margin-left: 12px;">Skills</span></a>
+    <div class="right">
+      <a href="contact.html"><i class="fas fa-envelope fa-1x" style="padding-bottom: 0.5rem;"></i><span style="margin-left: 12px;">Contact</span></a>
 
-    <nav class="flex items-center justify-between">
+    </div>
 
-      <div class="left flex items-center ">
-        <div class="branding">
-          <img src="images/logo1.png" height="100" width="100">
-        </div>
+  </div>
 
-        <a href="index.html"><button class="btn btn-primary" style="padding: 0.5rem;"> <i class="fas fa-home fa-2x"
-              style="padding-bottom: 0.5rem;"></i><br>home</button></a>
-        <a href="About.html"><button class="btn btn-primary" onclick="About.html" style="padding: 0.5rem;"><i
-              class="fas fa-user-alt fa-2x" style="padding-bottom: 0.5rem;"></i><br>About</button></a>
-        <a href="project.html"><button class="btn btn-primary" onclick="project.html" style="padding: 0.5rem;"> <i
-              class="fas fa-project-diagram fa-2x" style="padding-bottom: 0.5rem;"></i><br>Projects</button></a>
-        <a href="#"><button class="btn btn-primary" onclick="skill.html" style="padding: 0.5rem;"> <i
-              class="fas fa-cogs fa-2x" style="padding-bottom: 0.5rem;"></i><br>skills</button></a>
+  <div id="main">
+    
+    <span style="font-size:50px;cursor:pointer ; color:white;" onclick="openNav()">&#9776;</span>
+    <!--<img src="images/logo1.png" height="50" width="50"><-->
+          
 
+  <div class="container">
 
-
-      </div>
-
-      <div class="right">
-        <a href="contact.html"><button class="btn btn-primary" onclick="contact.html" style="padding: 0.5rem;"><i
-              class="fas fa-envelope fa-3x" style="padding-bottom: 0.5rem;"></i><br>contact</button></a>
-
-      </div>
-
-
-    </nav>
+    
 
     <div class="container_skills">
       <div class=" skills">
@@ -178,6 +239,8 @@
 
 
   </div>
+  </div>
+</header>
 </body>
 
 </html>

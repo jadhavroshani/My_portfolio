@@ -1,97 +1,175 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
-    <title>My awesome Portfolio</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+  <title>My awesome Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
-</script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <section>
-        <div class ="container">
-    
-            <nav class="flex items-center justify-between">
+  <section>
 
-                <div class="left flex items-center ">
-                  <div class="branding">
-                    <img src="images/logo1.png" height="100" width="100">
-                  </div>
-      
-                  <a href="index.html"><button class="btn btn-primary" style="padding: 0.5rem;" > <i class="fas fa-home fa-2x" style="padding-bottom: 0.5rem;" ></i><br>home</button></a>
-                          <a href="About.html"><button class="btn btn-primary" onclick="About.html"  style="padding: 0.5rem;"   ><i class="fas fa-user-alt fa-2x" style="padding-bottom: 0.5rem;" ></i><br>About</button></a>
-                          <a href="project.html"><button class="btn btn-primary" onclick="project.html"  style="padding: 0.5rem;"  > <i class="fas fa-project-diagram fa-2x" style="padding-bottom: 0.5rem;" ></i><br>Projects</button></a>
-                          <a href="skill.html"><button class="btn btn-primary" onclick="skill.html"  style="padding: 0.5rem;"  > <i class="fas fa-cogs fa-2x" style="padding-bottom: 0.5rem;" ></i><br>skills</button></a>
-                         
-      
-      
-                </div>
-      
-                <div class="right">
-                  <a href="contact.html"><button class="btn btn-primary" onclick="contact.html" style="padding: 0.5rem;" ><i class="fas fa-envelope fa-3x" style="padding-bottom: 0.5rem;"></i><br>contact</button></a>
-      
-                </div>
-      
-      
-              </nav>
-        <div class ="pic">
-            
-            <div class="right"> 
-                <h3>About <span> me</span></h3>
-                <div class="pos">
-                    <h1>Roshani Jadhav</h1>
-                    <h6> <span>Software Developer</span> </h6>
-                    <p>To work for an organization which provides me the opportunity to improve my skills and knowledge to growth along with the organization objective.
-                        An enthusiastic fresher with highly motivated and leadership skills having bachelors of engineering in Electronics and Telecommunication Engineering. Expert in implementation of each step of project. Eager to learn new technologies and methodologies. Always willing to innovate the new things which can improve the existing technology. Along with my academic, I love to create new things from waste material, painting and watching web shows.
-                    </p>
-                </div>
-                <div >
-                    
-                    <div class ="social  ">
-                        
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-                      <ul>
-                        <li>
-                          <a href="#">
-                            <i class="fab fa-facebook-f icon"></i>    </a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fab fa-twitter icon"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
-                        <li>
-                          <a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
-                          <li>
-                            <a href="#"><i class="fab fa-github-alt icon " ></i></a></li>
-                      </ul>
-                    
-                     </div>
-                     </div>
-                                   
-               
+      <a href="index.html"> <i class="fas fa-home fa-1x" style="padding-bottom: 0.5rem;"></i><span
+          style="margin-left: 10px;">Home</span></a>
+      <a href="About.html"><i class="fas fa-user-alt fa-1x" style="padding-bottom: 0.5rem;"></i>
+        <span style="margin-left: 10px;">About</span></a>
+      <a href="project.html"> <i class="fas fa-project-diagram fa-1x" style="padding-bottom: 0.5rem;"></i> <span style="margin-left: 6px;">Projects</span></a>
+      <a href="skill.html"> <i class="fas fa-cogs fa-1x" style="padding-bottom: 0.5rem;"></i><span style="margin-left: 12px;">Skills</span></a>
+      <div class="right">
+        <a href="contact.html"><i class="fas fa-envelope fa-1x" style="padding-bottom: 0.5rem;"></i><span style="margin-left: 12px;">Contact</span></a>
+
+      </div>
+
+    </div>
+
+    <div id="main">
+      
+      <span style="font-size:40px;cursor:pointer ; color:white;" onclick="openNav()">&#9776;</span>
+
+      <div class="container" style="margin-top:4rem; margin-bottom: 5rem;">
+        
+
+        <div class="pic">
+
+          <div class="right">
+            <h3>About <span> me</span></h3>
+            <div class="pos">
+              <h1>Roshani Jadhav</h1>
+              <h6> <span>Software Developer</span> </h6>
+              <p>To work for an organization which provides me the opportunity to improve my skills and knowledge to
+                growth along with the organization objective.
+                An enthusiastic fresher with highly motivated and leadership skills having bachelors of engineering in
+                Electronics and Telecommunication Engineering. Expert in implementation of each step of project. Eager
+                to
+                learn new technologies and methodologies. Always willing to innovate the new things which can improve
+                the
+                existing technology. Along with my academic, I love to create new things from waste material, painting
+                and
+                watching web shows.
+              </p>
             </div>
-           
-            
-        </div>
-        
-        </div>    
-        
-    </section>
+            <div>
 
-    <footer>
-		
-			
-	</footer>
+              <div class="social  ">
+
+
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fab fa-facebook-f icon"></i> </a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-twitter icon"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-linkedin-in icon"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-google-plus-g icon"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-github-alt icon "></i></a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+
+
+  </footer>
 
 
 </body>

@@ -25,12 +25,7 @@ header {
   
 }
 
-.container_1 {
-    background-color: #0c0811;
-    color: white;
-    padding: 10px;
 
-}
 section{
     
         background:var(--dark);
@@ -579,7 +574,23 @@ tbody td:nth-child(2) .percent{
   position: relative;left:32rem;bottom: 2px;
   border-radius: 100px;
 }
+header .social{
+  margin: 0;
+  padding:0;
+  background: #262626;
+  height: 30px;
+  width: 30px;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  
+  margin-left: 45rem;
+  margin-top: -12rem;
+  margin-bottom: 10rem;
+  bottom: 2px;
+  border-radius: 100px;
 
+}
 .social ul {
   display: flex;
   position: absolute;
@@ -592,8 +603,8 @@ tbody td:nth-child(2) .percent{
   list-style: none;
 }
 ul li a {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   background-color: #fff;
   text-align: center;
   line-height: 35px;

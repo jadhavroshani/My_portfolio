@@ -9,8 +9,71 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+
   <style>
-    *, *:before, *:after {
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+    *,
+    *:before,
+    *:after {
       box-sizing: border-box;
     }
 
@@ -24,7 +87,7 @@
 
     body {
       margin: 0;
-     
+
       padding: 0;
       height: 100vh;
       background-color: #d5d9e6;
@@ -33,14 +96,14 @@
 
     .project-container {
       display: flex;
-     
+
       margin: 0 auto;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       max-width: 1000px;
     }
-    
+
 
     .heading {
       width: 100%;
@@ -178,139 +241,143 @@
 </head>
 
 <body>
-  <header class="p">
-    <div class ="container">
-        
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-        <nav class="flex items-center justify-between">
+    <a href="index.html"> <i class="fas fa-home fa-1x" style="padding-bottom: 0.5rem;"></i><span
+        style="margin-left: 10px;">Home</span></a>
+    <a href="About.html"><i class="fas fa-user-alt fa-1x" style="padding-bottom: 0.5rem;"></i>
+      <span style="margin-left: 10px;">About</span></a>
+    <a href="project.html"> <i class="fas fa-project-diagram fa-1x" style="padding-bottom: 0.5rem;"></i> <span
+        style="margin-left: 6px;">Projects</span></a>
+    <a href="skill.html"> <i class="fas fa-cogs fa-1x" style="padding-bottom: 0.5rem;"></i><span
+        style="margin-left: 12px;">Skills</span></a>
+    <div class="right">
+      <a href="contact.html"><i class="fas fa-envelope fa-1x" style="padding-bottom: 0.5rem;"></i><span
+          style="margin-left: 12px;">Contact</span></a>
 
-            <div class ="left flex items-center ">
-                <div class="branding">
-                    <img src="images/logo1.png" height="100" width="100">
-                </div>
-                <a href="index.html"><button class="btn btn-primary" style="padding: 0.5rem;border: none;" > <i class="fas fa-home fa-2x" style="padding-bottom: 0.5rem;" ></i><br>home</button></a>
-                <a href="About.html"><button class="btn btn-primary" onclick="About.html"  style="padding: 0.5rem;border: none;"   ><i class="fas fa-user-alt fa-2x" style="padding-bottom: 0.5rem;" ></i><br>About</button></a>
-                <a href="#"><button class="btn btn-primary" onclick="project.html"  style="padding: 0.5rem;border: none;"  > <i class="fas fa-project-diagram fa-2x" style="padding-bottom: 0.5rem;" ></i><br>Projects</button></a>
-                <a href="skill.html"><button class="btn btn-primary" onclick="skill.html"  style="padding: 0.5rem;border: none;"  > <i class="fas fa-cogs fa-2x" style="padding-bottom: 0.5rem;" ></i><br>skills</button></a>
-               
-               
-               
-              </div>
-    
-          <div class ="right flex ">
-              
-            <a href="contact.html"><button class="btn btn-primary" onclick="contact.html" style="padding: 0.5rem;border: none;" ><i class="fas fa-envelope fa-3x" style="padding-bottom: 0.5rem;"></i><br>contact</button></a>
-            
-             
-              </div>
-             
-                  
-
-        </nav>
-        </div>
-      </header>    
-  <div class="project-container">
-    <h1 class="heading" style="text-transform: uppercase;">Project</h1>
-    <p class="description"> <span style="color: rgb(228, 70, 144); text-transform: uppercase; font-size:20px;"><b>Tech with demands</b></span></p>
-
-    <a class="card" href="#!">
-      <div class="font" style="background-image: url(./images/note.jpg);">
-        <p>RECORDNOTE</p>
-      </div>
-      <div class="back">
-        <div class="text">
-          <p style="text-transform: uppercase; text-align: center; color: rgb(103, 180, 174); font-size: larger;">
-            <b>RECORDNOTE</b></p>
-          <ul style="text-align:left;">
-            <li>Designed a Notes application.</li>
-            <li>Features: Save, Edit, and Delete.</li>
-            <li>Role: Developer </li>
-            <li>Tech Stack:JavaScript, HTML, CSS</li>
-            <li>Hosted platform: Netlify</li>
-          </ul>
-        </div>
-      </div>
-    </a>
-    <a class="card" href="#!">
-      <div class="font" style="background-image: url(./images/note.jpg);">
-        <p>Portfolio</p>
-      </div>
-      <div class="back">
-        <div class="text">
-          <p style="text-transform: uppercase; text-align: center; color: rgb(103, 180, 174); font-size: larger;">
-            <b>portfolio Website</b></p>
-          <ul style="margin-left: 1.5rem;">
-            <li>Designed a portfolio Website</li>
-            <li>Features: Home, Project, Skills, Contact.</li>
-            <li>Role: Developer</li>
-            <li>Tech Stack: HTML, CSS</li>
-            <li>Hosted platform: Netlify</li>
-          </ul>
-        </div>
-      </div>
-    </a>
-    <a class="card" href="#!">
-      <div class="font" style="background-image: url(./images/note.jpg);">
-        <p>IoT-FRUITS AND VEGETABLES QUALITYMETER</p>
-      </div>
-      <div class="back">
-        <div class="text">
-          <p style="text-align:center; color: rgb(103, 180, 174); font-size: larger;">IoT-Fruits and Vegetables
-            Quality-meter </p>
-          <ul style="margin-left: 1.5rem;">
-            <li>Designed an application for monitoring, analyzing the quality of pesticides for fruits, and
-              vegetables using NodeMCU</li>
-            <li>Role: Developer|Tech Stack: Hardware, NIR Sensor, HTML, CSS </li>
-            <li>Technology: NodeMCU, NIR Sensor, HTML, CSS</li>
-          </ul>
-        </div>
-      </div>
-    </a>
-
-
-    <a class="card" href="#!">
-      <div class="font" style="background-image: url(./images/note.jpg);">
-        <p>Low cost Automatic Dishwasher Machine
-        </p>
-      </div>
-      <div class="back">
-        <div class="text">
-          <p style=" text-align:center; color: rgb(103, 180, 174); font-size: larger;"><b>Low cost Automatic Dishwasher
-              Machine </b></p>
-          <ul style="margin-left: 1.5rem;">
-            <li>Semi-finalist Smart India Hackathon 2019 </li>
-            <li> A machine based on engineering logic and tricks, to reduce the efforts and to save
-              precious time of human beings.</li>
-            <li>Role:Team Leader</li>
-            <li>Technology: Aurdino, AC & DC motor, Sensors, Assembly C language</li>
-
-          </ul>
-        </div>
-      </div>
-    </a>
-    <a class="card" href="#!">
-      <div class="font" style="background-image: url(./images/note.jpg);">
-        <p>Voice Welcoming ROBOT</p>
-      </div>
-      <div class="back">
-        <div class="text">
-          <p style="text-align:left; color: rgb(103, 180, 174); font-size: larger;"><b>The ROBOT was designed to Welcome
-              to the Human beings in the campus</b></p>
-          <ul style="margin-left: 1.5rem;">
-            <li>Designed to Welcome Human beings on campus</li>
-            <li>Designed a system that is based on a single-board microcontroller</li>
-            <li>Role:Team Leader</li>
-            <li>Technology: Aurdino, IC APR33a3, Assembly C language</li>
-
-          </ul>
-        </div>
-      </div>
-    </a>
-
+    </div>
 
   </div>
 
+  <div id="main">
 
+    <span style="font-size:40px;cursor:pointer ; color:white;" onclick="openNav()">&#9776;</span>
+    <div class="container">
+
+
+
+
+
+      <div class="project-container">
+        <h1 class="heading" style="text-transform: uppercase;">Project</h1>
+        <p class="description"> <span
+            style="color: rgb(228, 70, 144); text-transform: uppercase; font-size:20px;"><b>Tech with demands</b></span>
+        </p>
+
+        <a class="card" href="#!">
+          <div class="font" style="background-image: url(./images/note.jpg);">
+            <p>Recordnote</p>
+          </div>
+          <div class="back">
+            <div class="text">
+              <p style="text-transform: uppercase; text-align: center; color: rgb(103, 180, 174); font-size: larger;">
+                <b>RECORDNOTE</b>
+              </p>
+              <ul style="text-align:left;">
+                <li>Designed a Notes application.</li>
+                <li>Features: Save, Edit, and Delete.</li>
+                <li>Role: Developer </li>
+                <li>Tech Stack:JavaScript, HTML, CSS</li>
+                <li>Hosted platform: Netlify</li>
+              </ul>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="#!">
+          <div class="font" style="background-image: url(./images/note.jpg);">
+            <p>Portfolio</p>
+          </div>
+          <div class="back">
+            <div class="text">
+              <p style="text-transform: uppercase; text-align: center; color: rgb(103, 180, 174); font-size: larger;">
+                <b>portfolio Website</b>
+              </p>
+              <ul style="margin-left: 1.5rem;">
+                <li>Designed a portfolio Website</li>
+                <li>Features: Home, Project, Skills, Contact.</li>
+                <li>Role: Developer</li>
+                <li>Tech Stack: HTML, CSS</li>
+                <li>Hosted platform: Netlify</li>
+              </ul>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="#!">
+          <div class="font" style="background-image: url(./images/note.jpg);">
+            <p>IoT-FRUITS AND VEGETABLES QUALITYMETER</p>
+          </div>
+          <div class="back">
+            <div class="text">
+              <p style="text-align:center; color: rgb(103, 180, 174); font-size: larger;">IoT-Fruits and Vegetables
+                Quality-meter </p>
+              <ul style="margin-left: 1.5rem;">
+                <li>Designed an application for monitoring, analyzing the quality of pesticides for fruits, and
+                  vegetables using NodeMCU</li>
+                <li>Role: Developer|Tech Stack: Hardware, NIR Sensor, HTML, CSS </li>
+                <li>Technology: NodeMCU, NIR Sensor, HTML, CSS</li>
+              </ul>
+            </div>
+          </div>
+        </a>
+
+
+        <a class="card" href="#!">
+          <div class="font" style="background-image: url(./images/note.jpg);">
+            <p>Low cost Automatic Dishwasher Machine
+            </p>
+          </div>
+          <div class="back">
+            <div class="text">
+              <p style=" text-align:center; color: rgb(103, 180, 174); font-size: larger;"><b>Low cost Automatic
+                  Dishwasher
+                  Machine </b></p>
+              <ul style="margin-left: 1.5rem;">
+                <li>Semi-finalist Smart India Hackathon 2019 </li>
+                <li> A machine based on engineering logic and tricks, to reduce the efforts and to save
+                  precious time of human beings.</li>
+                <li>Role:Team Leader</li>
+                <li>Technology: Aurdino, AC & DC motor, Sensors, Assembly C language</li>
+
+              </ul>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="#!">
+          <div class="font" style="background-image: url(./images/note.jpg);">
+            <p>Voice Welcoming ROBOT</p>
+          </div>
+          <div class="back">
+            <div class="text">
+              <p style="text-align:left; color: rgb(103, 180, 174); font-size: larger;"><b>The ROBOT was designed to
+                  Welcome
+                  to the Human beings in the campus</b></p>
+              <ul style="margin-left: 1.5rem;">
+                <li>Designed to Welcome Human beings on campus</li>
+                <li>Designed a system that is based on a single-board microcontroller</li>
+                <li>Role:Team Leader</li>
+                <li>Technology: Aurdino, IC APR33a3, Assembly C language</li>
+
+              </ul>
+            </div>
+          </div>
+        </a>
+
+
+      </div>
+
+    </div>
+  </div>
 
 </body>
 
