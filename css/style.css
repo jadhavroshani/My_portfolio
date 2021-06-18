@@ -580,13 +580,11 @@ header .social{
   background: #262626;
   height: 30px;
   width: 30px;
-  margin-right: 1rem;
-  margin-top: 1rem;
-  position: relative;
-  
-  margin-left: 45rem;
   margin-top: -12rem;
+  margin-left: 55%;
+  margin-right: 55%;
   margin-bottom: 10rem;
+  position: relative;
   bottom: 2px;
   border-radius: 100px;
 
